@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+	<title>Air Pollution Classifier</title>
+</head>
+<body>
+
+	<form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+	
+		<div class="container">
+			<div class="img-area" data-img="">
+				<i class='bx bxs-cloud-upload icon'></i>
+				<h3>Upload Image</h3>
+				<p>Image size must be less than <span>2MB</span></p>
+				{% if prediction %}
+					<img src="{{img_path}}"alt="">
+				{% endif %}
+				{% if not prediction %}
+				<img src="{{url_for('static', filename='img/poster.png')}}"alt="">
+				{% endif %}
+			</div>
+			<input type="file" name="my_image" id="pwd" accept="image/*" style="margin-bottom: 10px;align-items: center;">
+			<button class="select-image" type="submit">Select Image</button>
+
+			{% if prediction %}
+			<p style="margin-top: 20px; text-align: center;"><i> {{prediction}} </i></p>
+			{% endif %}
+		</div>
+
+	</form>
+
+	
+	
+	<!-- <script src="script.js"></script> -->
+</body>
+</html>
