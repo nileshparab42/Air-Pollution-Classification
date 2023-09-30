@@ -27,10 +27,10 @@ This deep learning project focuses on building a robust air quality classifier f
     |-- models/
         |-- FunctionalModel.h5
         |-- VGG16.h5
-    |-- notebooks
-	|-- functional_mobilenet_ann.ipynb
-	|-- model_testing.ipynb
-	|-- sequential_vgg16_transfer_learning.ipynb
+    |-- notebooks/
+        |-- functional_mobilenet_ann.ipynb
+        |-- model_testing.ipynb
+        |-- sequential_vgg16_transfer_learning.ipynb
     |--transformers/
         |--AQI_Class_le.pkl
         |--Location_le.pkl
@@ -44,7 +44,7 @@ This deep learning project focuses on building a robust air quality classifier f
                 |--poster.png
             |--js
                 |--script.js	
-	|--VGG16.h5
+	    |--VGG16.h5
         |-- app.py
         |-- templates/
             |-- index.html
@@ -54,10 +54,13 @@ This deep learning project focuses on building a robust air quality classifier f
     |-- requirements.txt
 ```
 
-* `models/`: This directory contains Jupyter notebooks for the two deep learning models.
+* `models/`: This directory contains H5 models for the two deep learning models.
+* `transformers/`: This directory contains pickle files for the two scalers and encoders.
+* `notebooks/`: This directory contains Jupyter notebooks for the two deep learning models.
 * `webapp/:` Contains the code for the web application built using Flask.
 * `data/`: This directory can contain the dataset used to train and evaluate the models.
 * `README.md`: This file (the current document) providing an overview of the project.
+* `requirements.txt`: This file contains all requirements versions for of the project.
 
 ## Dataset <a name="dataset"></a>
 
