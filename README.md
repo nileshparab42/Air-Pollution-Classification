@@ -131,7 +131,7 @@ pip install -r requirements.txt
 1. Clone this repository to your local machine.
 ```
 git clone https://github.com/nileshparab42/Air-Pollution-Classification.git
-cd air-quality-classifier
+cd Air-Pollution-Classification
 ```
 2. Train and evaluate the deep learning models using the Jupyter notebooks provided in the models/ directory.
 
