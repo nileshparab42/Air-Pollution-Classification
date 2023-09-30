@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
+from PIL import Image
+import keras.utils as image
 from keras.models import load_model
-from keras.preprocessing import image
-import numpy as np
+from keras.utils import load_img, img_to_array
+# from keras.preprocessing import image
 
 app = Flask(__name__)
 
